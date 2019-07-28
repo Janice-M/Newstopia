@@ -19,11 +19,11 @@
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
-            <h3>{{ movie.title }}</h3>
+            <h3>{{ title }}</h3>
 
-            <p class="overview"> {{ movie.overview }}</p>
+            <p class="overview"> {{ movie.description }}</p>
 
-            <p class="ratings"> <b> {{ movie.vote_average }}</b> - <i>{{ movie.vote_count}} votes </i> </p>
+            <p class="ratings"> <b> {{ movie.author }}</b> - <i>{{ movie.publishedAt}} time </i> </p>
             <a class="ratings" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
 
 
