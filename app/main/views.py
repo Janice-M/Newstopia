@@ -25,5 +25,8 @@ def sources(id):
 	'''
 	articles = get_articles(id)
 	title = f'NH | {id}'
-
 	return render_template('article.html', title= title,articles = articles)
+
+
+
+
