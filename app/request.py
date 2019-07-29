@@ -55,7 +55,7 @@ def process_sources(sources_list):
 		sources_results.append(sources_object)
 
 	return sources_results
-    
+
 
 def get_articles(id):
 	'''
@@ -78,16 +78,17 @@ def process_articles(articles_list):
 	'''
 	articles_object = []
 	for article_item in articles_list:
-		id = article_item.get('id')
-		author = article_item.get('author')
-		title = article_item.get('title')
-		description = article_item.get('description')
-		url = article_item.get('url')
-		image = article_item.get('urlToImage')
-		date = article_item.get('publishedAt')
+		
+		aut = article_item.get('author')
+		tit = article_item.get('title')
+		des = article_item.get('description')
+		uar = article_item.get('url')
+		urI = article_item.get('urlToImage')
+		pub = article_item.get('publishedAt')
+		con = article_item.get('content')
 
-		if image:
-			articles_result = Articles(id,author,title,description,url,image,date)
+		if urI:
+			articles_result = articles_list(aut, tit,des,uar,urI,pub,con)
 			articles_object.append(articles_result)
 
 	return articles_object
