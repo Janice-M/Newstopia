@@ -20,3 +20,32 @@ BDD(Behavior Driven Development) focuses on enabling user to read news from vari
 
 ![screenshot](terminal_screenhot.png)
 ![screenshot](terminal_screenhot.png)
+
+## Setup/Installation Requirements
+
+-   Open your terminal (ctrl+alt+T).
+-   Initialize git on your terminal.
+-   git clone <https://github.com/Janice-M/Newstopia.git>.
+-   open the 'Newstopia' folder.
+-   Open the files on your text editor of choice.
+-   To view the app
+-   Login to your account.
+-   Enter third party apps you want stored in The Password Vault
+-   View Apps you have added 
+
+## Technologies Used
+
+-   Python3.6
+-   Flask
+-   Bootstrap
+-   HTML5
+
+
+## Support and contact details
+
+In case of any issues please do contact me on janiceink001@gmail.com
+
+  ### License
+
+      Copyright (c) 2019 Janice-M
+
