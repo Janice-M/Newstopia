@@ -17,3 +17,6 @@ BDD(Behavior Driven Development) focuses on enabling user to read news from vari
 | Open the Newstopia Webpage                    | This will allow you to view all news sources                   |
 | Select the desire topic on the navigation bar | This will allow you to be able to go to topic of choice        |
 | Click on the article of choice                | This will allow you to visit the website and read your article |
+
+![screenshot](terminal_screenhot.png)
+![screenshot](terminal_screenhot.png)
