@@ -1,4 +1,5 @@
-{% extends 'base.html'%} {% import 'macros.html' as macro%}
+{% extends 'base.html'%} 
+{% import 'macros.html' as macro%}
 
 <!-- Styles block -->
 
@@ -7,35 +8,36 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> 
 {% endblock %}
 <!-- Content block -->
-{% block content %}
 
-<div class="container- fluid">
-    <form>
-        <input type="text" name="article_query" placeholder="Search an article" class="form-control">
-        <input type="submit"  value="Submit" class="btn btn-default">
-    </form>
+{% block content%}
+<div class="container">
+  <!-- General News Section  -->
+  <hr>
+
+  {{ macro.displaySourceList(sources)}}
+
+  <!-- General News Section  -->
+
+  <h3> Top Technology News Sources</h3>
+  <hr>
+
+  {{ macro.displaySourceList(technology_sources)}}
+
+  <!-- Entertainment News Section  -->
+
+  <h3> Top Entertainment News Sources</h3>
+  <hr>
+
+  {{ macro.displaySourceList(entertainment_sources)}}
+
+  <!-- Entertainment News Section  -->
+
+  <h3> Top Sports News Sources</h3>
+  <hr>
+
+  {{ macro.displaySourceList(sports_sources)}}
 
 </div>
-    <div class = "container ">
-    <!-- Different news source -->
-    <div class="row text-center">
-        <h3 class = "text-center"> News Source</h3>
-        <ul>
-            {{ macro.displayMovieList(popular)}}
-        </ul>
-    </div>
-    <!-- Upcoming movie  -->
-    <div class="row text-center">
-
-        <h3> Articles </h3>
-        <ul>
-            {{ macro.displayMovieList(upcoming)}}
-        </ul>
-    </div>
-
-    <!-- articles at the bottom -->
-
-</div>
 
 
-{% endblock%}
+{%endblock%}
