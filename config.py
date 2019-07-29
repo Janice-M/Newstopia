@@ -2,9 +2,12 @@ import os
 
 class Config:
 
-    NEWS_API_BASE_URL ='https://newsapi.org/v2/top-headlines?country=us&apiKey=debc59c4df7748388daae665844a6ca2'
-    NEWS_API_KEY = os.environ.get('MOVIE_API_KEY')
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+   	NEWS_SOURCES_BASE_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+   	ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
+   	NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+   	@staticmethod
+   	def init_app(app):
+   		pass
 
 
 class ProdConfig(Config):
@@ -17,4 +20,5 @@ class DevConfig(Config):
 config_options = {
 'development':DevConfig,
 'production':ProdConfig
+
 }
