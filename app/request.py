@@ -25,12 +25,11 @@ def get_sources(category):
 		get_sources_data = url.read()
 		get_sources_response = json.loads(get_sources_data)
 
-		sources_results = ''
+		sources_results = None
 
 		if get_sources_response['sources']:
 			sources_results_list = get_sources_response['sources']
 			sources_results = process_sources(sources_results_list)
-
 	return sources_results
 
 def process_sources(sources_list):
@@ -56,6 +55,7 @@ def process_sources(sources_list):
 		sources_results.append(sources_object)
 
 	return sources_results
+    
 
 def get_articles(id):
 	'''

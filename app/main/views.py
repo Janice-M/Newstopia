@@ -15,15 +15,15 @@ def index():
 	technology_sources = get_sources('technology')
 	entertainment_sources = get_sources('entertainment')
 	title = "Newstopia"
-
+ 
 	return render_template('index.html',title = title, genera = general, sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
 
 @main.route('/sources/<id>')
-def articles(id):
+def sources(id):
 	'''
 	view articles page
 	'''
-	articles = get_sources(id)
+	articles = get_articles(id)
 	title = f'NH | {id}'
 
-	return render_template('article.html',title= title,articles = articles)
+	return render_template('article.html', title= title,articles = articles)
